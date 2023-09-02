@@ -432,7 +432,8 @@ class __sara__:
          please be patient until the process is complete 
         ''')
         file = genertare_screen_locker(name, head, desc, keys, icon)
-        if not os.path.isfile(file): exit
+        if not os.path.isfile(file): (f'\n{sara} : sorry, failed to build \'{d}{file}{w}\' :( \n')
+        prints(f'''
         
 {sara} : your screen locker apps successfully created
          the application is saved as \'{g}{file}{w}\'
